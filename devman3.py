@@ -32,12 +32,12 @@ mail=mail.replace("%friend_name%", friend_name)
 mail=mail.replace("%my_name%", my_name)
 receiver="shroom2207@yandex.ru"
 subject="Приглашение!"
-letter=(f"""From: {login}
+letter=f"""From: {login}
 To: {receiver}
 Subject: {subject}
 Content-Type: text/plain; charset="UTF-8";
 
-{mail}""")
+{mail}"""
 letter=letter.encode("UTF-8")
 
 server.sendmail(login, receiver, letter)
